@@ -15,5 +15,14 @@ public class JavaInf_2 {
         }
         return sb.toString();
     }
+
+/*    public static String InfSolution(String str) {
+        StringBuilder answer = new StringBuilder();
+        for (char x : str.toCharArray()) {
+            if(x >= 97 && x <= 122) answer.append((char) (x - 32));
+            else answer.append((char) (x + 32));
+        }
+        return answer.toString();
+    }*/
 }
 
