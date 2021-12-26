@@ -16,6 +16,10 @@ public class JavaInf_2 {
         return sb.toString();
     }
 
+
+    //97 ~ 122 : 소문자
+    //65 ~ 90 : 대문자
+
 /*    public static String InfSolution(String str) {
         StringBuilder answer = new StringBuilder();
         for (char x : str.toCharArray()) {
