@@ -18,9 +18,8 @@ public class JavaInf_8 {
                 .filter(i -> Character.isAlphabetic(str.charAt(i)))
                 .forEach(i -> sb.append(str.charAt(i)));
 
+        String tempStr = sb.toString();
         String reverseStr = sb.reverse().toString();
-        return reverseStr.equals(sb.toString());
-
+        return reverseStr.equals(tempStr);
     }
-
 }
