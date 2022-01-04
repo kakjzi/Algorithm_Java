@@ -1,5 +1,3 @@
-package InfJava;
-
 import java.util.Scanner;
 
 public class JavaInf_1 {

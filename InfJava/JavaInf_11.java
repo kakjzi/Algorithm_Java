@@ -1,5 +1,3 @@
-package InfJava;
-
 import java.util.Scanner;
 import java.util.stream.IntStream;
 
