@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class JavaInf_19 {
+public class JavaInf_18 {
     public static void main(String[] args) throws IOException {
 
         BufferedReader sc = new BufferedReader(new InputStreamReader(System.in));
