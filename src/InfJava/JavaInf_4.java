@@ -1,3 +1,5 @@
+package InfJava;
+
 import java.util.Scanner;
 
 public class JavaInf_4 {
@@ -5,7 +7,7 @@ public class JavaInf_4 {
         Scanner in = new Scanner(System.in);
         int testCase = in.nextInt();
 
-        for (int i=0; i < testCase; i++) {
+        for (int i = 0; i < testCase; i++) {
             System.out.println(solution(in.next()));
         }
     }

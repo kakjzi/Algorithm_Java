@@ -1,5 +1,6 @@
+package InfJava;
+
 import java.util.Scanner;
-import java.util.stream.IntStream;
 
 public class JavaInf_11 {
     public static void main(String[] args) {
@@ -26,7 +27,7 @@ public class JavaInf_11 {
             else {
                 answer.append(str.charAt(i));
                 if (cnt > 1) {
-                    answer.append(String.valueOf(cnt));
+                    answer.append(cnt);
                 }
                 cnt = 1;
             }

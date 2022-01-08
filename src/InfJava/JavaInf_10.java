@@ -1,3 +1,4 @@
+package InfJava;
 
 import java.util.Scanner;
 
@@ -23,9 +24,9 @@ public class JavaInf_10 {
         int tDistance = 100;
         //좌측
         for (int i = 0; i < str.length(); i++) {
-            if(str.charAt(i) == t){
+            if (str.charAt(i) == t) {
                 tDistance = 0;
-            }else{
+            } else {
                 tDistance++;
             }
             answer[i] = tDistance;
@@ -36,12 +37,12 @@ public class JavaInf_10 {
         for (int i = str.length() - 1; i >= 0; i--) {
             if (str.charAt(i) == t) {
                 tDistance = 0;
-            }else{
+            } else {
                 tDistance++;
             }
-            answer[i]= Math.min(answer[i],tDistance);
+            answer[i] = Math.min(answer[i], tDistance);
         }
 
-       return answer;
+        return answer;
     }
 }
