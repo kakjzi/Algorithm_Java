@@ -3,32 +3,33 @@ package Programmers.Level3;
 import java.util.Arrays;
 
 public class _20220110 {
-    public static long solution(int n, int[] times) {
-        long answer = Long.MAX_VALUE;
-
+    public long solution(int n, int[] times) {
         Arrays.sort(times);
 
-        long start = times[0];  // 1분 부터
-        //최대시간 = 가장오래걸리는시간 * 인원수
-        long end = (long) times[times.length - 1] * (long) n;
+        long start = 1;
+        long answer = (long) n * times[times.length - 1]; //명시적으로 타입변환 ***
+        long end = answer;
 
-        long mid;
-        long sum = 0;
         while (start <= end) {
-            mid = (start + end) / 2;
-            sum = 0;
+            long mid = (end + start) / 2;
+            long curCompleted = 0;
+
             for (int time : times) {
-                sum += mid / time;
+                curCompleted += mid / time;
             }
 
-            if (sum >= n) {
-                answer = Math.min(answer, mid);
-                end = mid - 1;
-            } else {
+            if (n > curCompleted) {
+                //오른쪽 범위 설정
                 start = mid + 1;
+            } else {
+                //왼쪽 범위 설정
+                end = mid - 1;
+                answer = Math.min(answer, mid);
             }
         }
         return answer;
     }
+
 }
+
 
