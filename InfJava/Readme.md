@@ -20,4 +20,5 @@
 * [뒤집은 소수](JavaInf_18.java)
 * [점수계산](JavaInf_19.java)
 * [등수구하기](JavaInf_20.java)
-* [격자판 최대합](JavaInf_12.java)
+* [격자판 최대합](JavaInf_21.java)
+* [봉우리](JavaInf_22.java)
