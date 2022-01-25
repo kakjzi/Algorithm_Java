@@ -1,4 +1,4 @@
-package Programmers.level1;
+package Programmers.Level1;
 
 public class _20220111 {
     public int[] solution(int[] lottos, int[] win_nums) {
