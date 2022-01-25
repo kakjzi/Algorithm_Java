@@ -1,50 +1,46 @@
 package InfJava;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
-public class JavaInf_23 {
+class JavaInf_23 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        int[][] arr = new int[n + 1][6];
 
-    public static int solution(int n, int[][] arr) {
-        int answer = 1; // 반장
-        int max = Integer.MIN_VALUE; // 같은 반이었던 학생 수 최대값
-
-        for (int i = n - 1; i >= 0; i--) { // 학생 번호
-            int[][] friend = new int[n][5];
-            int cnt = 0;
-            for (int j = 0; j < 5; j++) { // 학년
-                int classNum = arr[i][j]; // 반
-                for (int k = 0; k < n; k++) { // 학생 번호
-                    if (k != i) {
-                        if (arr[k][j] == classNum) friend[k][j] = 1;
-                    }
-                }
-            }
-            for (int q = 0; q < n; q++) {
-                for (int p = 0; p < 5; p++) {
-                    if (friend[q][p] == 1) {
-                        cnt++;
-                        break;
-                    }
-                }
-            }
-            if (cnt >= max) {
-                max = cnt;
-                answer = i + 1; // 반장이 되는 학생 번호
-            }
-        }
-        return answer;
-    }
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        int[][] arr = new int[n][5];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < 5; j++) {
-                arr[i][j] = scanner.nextInt();
+        for (int i = 1; i <= n; i++) {
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            for (int j = 1; st.hasMoreTokens(); j++) {
+                arr[i][j] = Integer.parseInt(st.nextToken());
             }
         }
         System.out.println(solution(n, arr));
     }
 
+    static int solution(int n, int[][] arr) {
+        int answer = 0;
+        int max = 0;
+        //기준
+        for (int i = 1; i <= n; i++) {
+            int count = 0;
+
+            //비교학생
+            for (int j = 1; j <= n; j++) {
+                for (int k = 1; k <= 5; k++) {
+                    if (arr[i][k] == arr[j][k]) {
+                        count++;
+                        break;
+                    }
+                }
+            }
+            if (max < count) {
+                max = count;
+                answer = i;
+            }
+        }
+        return answer;
+    }
 }
