@@ -23,3 +23,4 @@
 * [격자판 최대합](JavaInf_21.java)
 * [봉우리](JavaInf_22.java)
 * [임시반장 정하기](JavaInf_23.java)
+* [멘토링](JavaInf_24.java)
