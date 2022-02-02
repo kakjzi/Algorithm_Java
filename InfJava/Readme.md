@@ -30,3 +30,4 @@
 * [연속 부분수열](JavaInf_28.java)
 * [연속된 자연수의 합](JavaInf_29.java)
 * [최대 길이 연속부분수열](JavaInf_30.java)
+* [학급 회장 해쉬](JavaInf_31.java)
