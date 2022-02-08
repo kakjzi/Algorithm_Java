@@ -32,3 +32,4 @@
 * [최대 길이 연속부분수열](JavaInf_30.java)
 * [학급 회장 해쉬](JavaInf_31.java)
 * [아나그램 (해쉬)](JavaInf_32.java)
+* [매출액의 종류](JavaInf_33.java)
