@@ -31,7 +31,7 @@ public class JavaInf_35 {
             }
         }
         Optional<Integer> first = treeSet.stream()
-                .skip(2)
+                .skip(k - 1)
                 .findFirst();
         return first.orElse(-1);
 
