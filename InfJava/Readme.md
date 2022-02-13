@@ -35,3 +35,4 @@
 * [매출액의 종류](JavaInf_33.java)
 * [모든 아나그램 찾기](JavaInf_34.java)
 * [k번째 큰 수](JavaInf_35.java)
+* [올바른 괄호](JavaInf_36.java)
