@@ -1,6 +1,7 @@
 package InfJava;
 
 import java.util.Collections;
+import java.util.Optional;
 import java.util.Scanner;
 import java.util.TreeSet;
 
@@ -19,7 +20,6 @@ public class JavaInf_35 {
     }
 
     public static int solution(int[] arr, int n, int k) {
-        int answer = -1;
 
         TreeSet<Integer> treeSet = new TreeSet<>(Collections.reverseOrder());
 
@@ -30,13 +30,20 @@ public class JavaInf_35 {
                 }
             }
         }
-        int count = 0;
-        for (Integer x : treeSet) {
+        Optional<Integer> first = treeSet.stream()
+                .skip(2)
+                .findFirst();
+        return first.orElse(-1);
+
+      /*
+      int answer = -1;
+       int count = 0;
+       for (Integer x : treeSet) {
             count++;
             if (k == count) {
                 return x;
             }
-        }
-        return answer;
+        }*/
+        //return answer;
     }
 }
