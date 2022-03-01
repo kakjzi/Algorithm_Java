@@ -36,3 +36,4 @@
 * [모든 아나그램 찾기](JavaInf_34.java)
 * [k번째 큰 수](JavaInf_35.java)
 * [올바른 괄호](JavaInf_36.java)
+* [괄호 문자 제거](JavaInf_37.java)
