@@ -37,3 +37,4 @@
 * [k번째 큰 수](JavaInf_35.java)
 * [올바른 괄호](JavaInf_36.java)
 * [괄호 문자 제거](JavaInf_37.java)
+* [연속 부분수열](JavaInf_38.java)
