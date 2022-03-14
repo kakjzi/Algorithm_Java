@@ -38,3 +38,4 @@
 * [올바른 괄호](JavaInf_36.java)
 * [괄호 문자 제거](JavaInf_37.java)
 * [연속 부분수열](JavaInf_38.java)
+* [크레인 인형뽑기](JavaInf_39.java)
