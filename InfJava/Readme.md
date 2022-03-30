@@ -42,3 +42,4 @@
 * [후위식 연산(postfix)](JavaInf_40.java)
 * [쇠막대기](JavaInf_41.java)
 * [공주구하기](JavaInf_42.java)
+* [교육과정 설계](JavaInf_43.java)
