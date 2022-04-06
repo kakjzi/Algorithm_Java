@@ -43,3 +43,4 @@
 * [쇠막대기](JavaInf_41.java)
 * [공주구하기](JavaInf_42.java)
 * [교육과정 설계](JavaInf_43.java)
+* [응급실](JavaInf_44.java)
