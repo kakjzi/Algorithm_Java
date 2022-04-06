@@ -44,3 +44,4 @@
 * [공주구하기](JavaInf_42.java)
 * [교육과정 설계](JavaInf_43.java)
 * [응급실](JavaInf_44.java)
+* [선택 정렬](JavaInf_45.java)
