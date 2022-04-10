@@ -49,3 +49,4 @@
 * [삽입 정렬](JavaInf_47.java)
 * [Least Recently Used](JavaInf_48.java)
 * [중복 확인](JavaInf_49.java)
+* [장난꾸러기](JavaInf_50.java)
