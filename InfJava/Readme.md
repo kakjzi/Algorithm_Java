@@ -47,3 +47,4 @@
 * [선택 정렬](JavaInf_45.java)
 * [버블 정렬](JavaInf_46.java)
 * [삽입 정렬](JavaInf_47.java)
+* [Least Recently Used](JavaInf_47.java)
