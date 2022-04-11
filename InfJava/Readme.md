@@ -50,3 +50,4 @@
 * [Least Recently Used](JavaInf_48.java)
 * [중복 확인](JavaInf_49.java)
 * [장난꾸러기](JavaInf_50.java)
+* [장난꾸러기](JavaInf_51.java)
