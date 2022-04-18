@@ -51,3 +51,4 @@
 * [중복 확인](JavaInf_49.java)
 * [장난꾸러기](JavaInf_50.java)
 * [좌표 정렬](JavaInf_51.java)
+* [이분검색](JavaInf_52.java)
