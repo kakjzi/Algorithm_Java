@@ -18,6 +18,7 @@ public class JavaInf_51 {
         }
 
         Collections.sort(pointList);
+//        정렬 규칙을 정한뒤 sort 메서드를 호출하게 되면 규칙대로 정렬이 된다.
 
         for (Point point : pointList) {
             System.out.println(point.x + " " + point.y);
@@ -35,6 +36,9 @@ public class JavaInf_51 {
 
         @Override
         public int compareTo(Point o) {
+            // 음수가 되는 쪽으로 선택하면 오름차순 내림차순을 정할 수 있다.
+            // 기준 - 다음 인덱스 = 음수 -> 오름차순
+            // 다음 인덱스 - 기준 = 음수 -> 내림차순
             if (this.x == o.x) {
                 return this.y - o.y;
             }
