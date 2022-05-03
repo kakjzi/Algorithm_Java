@@ -53,3 +53,4 @@
 * [좌표 정렬](JavaInf_51.java)
 * [이분검색](JavaInf_52.java)
 * [뮤직비디오(결정알고리즘)](JavaInf_53.java)
+* [마구간 정하기(결정알고리즘)](JavaInf_54.java)
