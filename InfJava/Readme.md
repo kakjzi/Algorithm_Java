@@ -56,3 +56,4 @@
 * [마구간 정하기(결정알고리즘)](JavaInf_54.java)
 * [송아지 찾기(BFS:상대트리탐색)](JavaInf_55.java)
 * [합이 같은 부분집합(DFS : 아마존 인터뷰)](JavaInf_56.java)
+* [바둑이 승차(DFS)](JavaInf_57.java)
