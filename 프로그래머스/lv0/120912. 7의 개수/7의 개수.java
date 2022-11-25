@@ -2,9 +2,8 @@ import java.util.Arrays;
 
 class Solution {
       public int solution(int[] array) {
-        String tmp = Arrays.toString(array);
-
-        return (int) tmp.chars()
+        return (int) Arrays.toString(array)
+                  .chars()
                   .filter(i -> i == '7')
                   .count();
     }
