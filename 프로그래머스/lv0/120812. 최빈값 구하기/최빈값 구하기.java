@@ -1,9 +1,8 @@
 import java.util.*;
 import java.util.Map.Entry;
-
 class Solution {
     public int solution(int[] array) {
-        int answer = 0;
+       int answer = 0;
         Map<Integer, Integer> tmp = new HashMap<>();
         for (int j : array) {
             tmp.putIfAbsent(j, 1);
