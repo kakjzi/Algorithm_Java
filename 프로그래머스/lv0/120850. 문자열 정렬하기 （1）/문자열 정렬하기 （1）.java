@@ -1,11 +1,7 @@
-import java.util.stream.Stream;
-import java.util.Arrays;
+import java.util.*;
 
 class Solution {
-    public int[] solution(String my_string) {
-        String[] tmp = my_string.replaceAll("[^0-9]*", "").split("");
-        Arrays.sort(tmp);
-        
-        return Stream.of(tmp).mapToInt(Integer::parseInt).toArray();
+    public int[] solution(String myString) {
+        return Arrays.stream(myString.replaceAll("[A-Z|a-z]", "").split("")).sorted().mapToInt(Integer::parseInt).toArray();
     }
 }
