@@ -23,7 +23,7 @@ class Main {
 
         int left = 0, right = Integer.MAX_VALUE;
         while (left < right) {
-            int mid = left + (right - left) / 2;
+            int mid = (right + left) / 2;
             if (isDistinguishable(files, mid)) {
                 right = mid;
             } else {
