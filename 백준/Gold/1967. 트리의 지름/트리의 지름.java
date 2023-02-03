@@ -26,7 +26,6 @@ public class Main {
 		N = Integer.parseInt(st.nextToken());
 
 		adj = new ArrayList[N + 1];
-		visit = new boolean[N + 1];
 
 		for (int i = 0; i <= N; i++) {
 			adj[i] = new ArrayList<>();
