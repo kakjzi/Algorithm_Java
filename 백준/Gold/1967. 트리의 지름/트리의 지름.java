@@ -61,7 +61,6 @@ public class Main {
 
 			visit[temp] = true;
 			dfs(temp, edge.cost + cost);
-			visit[temp] = false;
 		}
 	}
 }
