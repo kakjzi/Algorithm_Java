@@ -51,8 +51,6 @@ public class Main {
 	}
 
 	static void dfs(int node, int cost) {
-		if (N == 1) return;
-
 		result = Math.max(cost, result);
 
 		for (Edge edge : adj[node]) {
