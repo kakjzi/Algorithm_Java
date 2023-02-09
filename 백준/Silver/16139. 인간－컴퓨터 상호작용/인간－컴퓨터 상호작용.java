@@ -3,30 +3,25 @@ import java.io.InputStreamReader;
 import java.io.IOException;
 
 public class Main {
-	static char c;
-	static String s;
-	static int q, l, r;
-	static int[][] alphaList = new int[26][200000];
-
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		s = br.readLine();
-		q = Integer.parseInt(br.readLine());
-		for (int i = 0; i < s.length(); i++) {
-			for (int alpha = 0; alpha < 26; alpha++)
-				alphaList[alpha][i] = (i == 0) ? 0 : alphaList[alpha][i - 1];
-			alphaList[s.charAt(i) - 'a'][i]++;
+		String s = br.readLine();
+		int[][] sum = new int[26][200001];
+		for (int i=0; i<s.length(); i++) {
+			sum[s.charAt(i) - 'a'][i+1]++;
 		}
-		while (q-- > 0) {
+		for (int i=1; i<=s.length(); i++) {
+			for (int j=0; j<26; j++) {
+				sum[j][i] = sum[j][i-1] + sum[j][i];
+			}
+		}
+		int n = Integer.parseInt(br.readLine());
+		for (int i=0; i<n; i++) {
 			String[] line = br.readLine().split(" ");
-			c = line[0].charAt(0);
-			l = Integer.parseInt(line[1]);
-			r = Integer.parseInt(line[2]);
-			System.out.println((l == 0) ? alphaList[c - 'a'][r] : alphaList[c - 'a'][r] - alphaList[c - 'a'][l - 1]);
+			char a = line[0].charAt(0);
+			int b = Integer.parseInt(line[1]);
+			int c = Integer.parseInt(line[2]);
+			System.out.println(sum[a - 'a'][c+1] - sum[a - 'a'][b]);
 		}
 	}
-
 }
-
-
-
