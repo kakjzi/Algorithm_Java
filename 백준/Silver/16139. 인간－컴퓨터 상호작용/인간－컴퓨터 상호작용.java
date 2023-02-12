@@ -1,27 +1,38 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
 		String s = br.readLine();
-		int[][] sum = new int[26][200001];
-		for (int i=0; i<s.length(); i++) {
-			sum[s.charAt(i) - 'a'][i+1]++;
-		}
-		for (int i=1; i<=s.length(); i++) {
-			for (int j=0; j<26; j++) {
-				sum[j][i] = sum[j][i-1] + sum[j][i];
+		int q = Integer.parseInt(br.readLine());
+		Map<Character, List<Integer>> alphabetList = new HashMap<>();
+		
+		for (char c = 'a'; c <= 'z'; c++) {
+			alphabetList.put(c, new ArrayList<>());
+			alphabetList.get(c).add(0);
+
+			int count = 0;
+
+			for (int i = 0; i < s.length(); i++) {
+				if (s.charAt(i) == c) count++;
+				alphabetList.get(c).add(count);
 			}
 		}
-		int n = Integer.parseInt(br.readLine());
-		for (int i=0; i<n; i++) {
-			String[] line = br.readLine().split(" ");
-			char a = line[0].charAt(0);
-			int b = Integer.parseInt(line[1]);
-			int c = Integer.parseInt(line[2]);
-			System.out.println(sum[a - 'a'][c+1] - sum[a - 'a'][b]);
+		
+		for (int i = 0; i < q; i++) {
+			String[] input = br.readLine().split(" ");
+			char c = input[0].charAt(0);
+			int start = Integer.parseInt(input[1]);
+			int end = Integer.parseInt(input[2]);
+			
+			System.out.println(alphabetList.get(c).get(end + 1) - alphabetList.get(c).get(start));
 		}
 	}
 }
