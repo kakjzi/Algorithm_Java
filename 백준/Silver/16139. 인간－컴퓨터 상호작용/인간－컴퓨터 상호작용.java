@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -9,30 +11,26 @@ import java.util.Map;
 public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		char[] arr = br.readLine().toCharArray();
+		int n = Integer.parseInt(br.readLine());
+		char a;
+		int x, y;
+		int count = 0;
+		String[] arr1;
 
-		String s = br.readLine();
-		int q = Integer.parseInt(br.readLine());
-		Map<Character, List<Integer>> alphabetList = new HashMap<>();
-		
-		for (char c = 'a'; c <= 'z'; c++) {
-			alphabetList.put(c, new ArrayList<>());
-			alphabetList.get(c).add(0);
-
-			int count = 0;
-
-			for (int i = 0; i < s.length(); i++) {
-				if (s.charAt(i) == c) count++;
-				alphabetList.get(c).add(count);
+		for(int i = 0; i < n; i++) {
+			arr1 = br.readLine().split(" ");
+			a = arr1[0].charAt(0);
+			x = Integer.parseInt(arr1[1]);
+			y = Integer.parseInt(arr1[2]);
+			for(int j = x; j <= y; j++) {
+				if(a == arr[j]) count = count + 1;
 			}
+
+			bw.write(Integer.toString(count) + "\n");
+			count = 0;
 		}
-		
-		for (int i = 0; i < q; i++) {
-			String[] input = br.readLine().split(" ");
-			char c = input[0].charAt(0);
-			int start = Integer.parseInt(input[1]);
-			int end = Integer.parseInt(input[2]);
-			
-			System.out.println(alphabetList.get(c).get(end + 1) - alphabetList.get(c).get(start));
-		}
+		bw.close();
 	}
 }
